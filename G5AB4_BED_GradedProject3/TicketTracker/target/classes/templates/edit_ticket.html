@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ticket Tracking System</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-info navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">Ticket Tracking System</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/tickets}">List Tickets</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-lg-8 col-md-8 col-sm-6 container justify-content-center card">
+
+				<h1 class="text-center">Update Ticket</h1>
+				<div class="card-body">
+					<form th:action="@{/tickets/{id} (id=${ticket.id})}" th:object = "${ticket}" method="POST">
+						<div class="form-group">
+							<label> Ticket Title </label> <input type="text"
+								name="ticketTitle" th:field="*{ticketTitle}"
+								class="form-control" placeholder="Enter Ticket Title" />
+						</div>
+
+
+
+						<div class="form-group">
+							<label> Ticket Short Description </label>
+							<textarea name="TicketShortDescription"
+								th:field="*{ticketShortDescription}" class="form-control"
+								placeholder="Ticket Short Description" /></textarea>
+						</div>
+						<div class="form-group">
+							<label>Content</label>
+							<textarea class="form-control" id="editor"
+								placeholder="Enter Content" th:field="*{ticketContent}"
+								autocomplete="off"></textarea>
+						</div>
+
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">Submit</button>
+							
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+</body>
+</html>

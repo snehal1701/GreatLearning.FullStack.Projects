@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Ticket Tracker System</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script
+	src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md bg-primary navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">Ticket Tracker System</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/tickets}">List Tickets</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+
+			<div
+				class="col-lg-8 col-md-8 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Create New Ticket</h1>
+
+				<div class="card-body">
+					<form th:action="@{/tickets}" th:object="${ticket}" method="POST">
+						<div class="form-group">
+							<label> Ticket Title </label> <input type="text"
+								name="ticketTitle" th:field="*{ticketTitle}"
+								class="form-control" placeholder="Enter  Ticket Title"
+								required="required">
+						</div>
+
+						<div class="form-group">
+							<label> Ticket Short Description </label>
+							<textarea name="TicketShortDescription"
+								th:field="*{ticketShortDescription}" class="form-control"
+								placeholder="Ticket Short Description"></textarea>
+						</div>
+						<div class="form-group">
+							<label>Content</label>
+							<textarea class="form-control" id="editor"
+								placeholder="Enter Content" th:field="*{ticketContent}"
+								autocomplete="off"></textarea>
+						</div>
+
+						<div class="box-footer">
+							<button type="reset" class="btn btn-primary">Reset</button>
+							<button type="submit" class="btn btn-primary">Submit</button>
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+</body>
+</html>
