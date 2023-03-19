@@ -1,0 +1,222 @@
+@media screen and (min-width:360px) {
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        flex-wrap: nowrap;
+        background-color: #b0c4de
+    }
+
+    header {
+        text-align: center;
+        background-color: #4d4a4a;
+        padding: 2px;
+        color: #fff;
+        margin-bottom: 0;
+        top: 0;
+        position: sticky;
+        z-index: 1
+    }
+
+    header h1 {
+        font-size: 40px
+    }
+
+    footer {
+        margin: 0;
+        position: relative;
+        bottom: 0;
+        color: #fff;
+        background-color: #000;
+        text-align: center
+    }
+
+    footer p {
+        margin: 0;
+        padding: 15px
+    }
+
+    .navbar {
+        background-color: #858282;
+        top: 6rem;
+        position: sticky;
+        z-index: 1;
+        left: 0
+    }
+
+    .menu {
+        margin: 0
+    }
+
+    .menu li {
+        display: inline-block;
+        padding: 5px
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        padding: 5px;
+        margin: 0
+    }
+
+    .menu>li>a:hover {
+        background-color: #383737
+    }
+
+
+
+    .menu li:nth-child(2):hover #drop {
+        display: block
+    }
+
+    .menu li:nth-child(3):hover #drop {
+        display: block
+    }
+
+    .menu>li:hover .drop {
+        display: block
+    }
+
+    .drop li {
+        padding: 5px;
+        display: block;
+        background-color: #fff
+    }
+
+    .drop li a {
+        text-decoration: none;
+        color: #7fa6ca
+    }
+
+    .drop li:hover {
+        background-color: rgba(80, 96, 155, .622)
+    }
+
+    .drop li:hover a {
+        color: #fff
+    }
+
+    .drop {
+        text-align: justify;
+        position: absolute;
+        padding: 0;
+        top: 33px;
+        width: auto;
+        max-width: 150px;
+        display: none
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0%)
+        }
+
+        100% {
+            transform: translateX(-69.5%)
+        }
+    }
+
+    #offers {
+        width: 95vw;
+        overflow-x: hidden;
+        margin: auto;
+    }
+
+    .slider {
+        background: #fff;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        width: fit-content;
+        animation: scroll 30s linear infinite;
+
+    }
+
+    .slide-track {
+
+        position: relative;
+        display: flex;
+        width: fit-content;
+    }
+
+    .slide {
+        border: solid #4682b4 2px;
+        margin-left: .25rem;
+        width: fit-content;
+    }
+
+    .slide>img {
+        height: 50dvh;
+        max-height: 400px
+    }
+
+    .slide:hover {
+        border: solid red 2px
+    }
+
+    .product_section {
+        margin: auto;
+        padding-left: 2vw;
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flexbox;
+        justify-items: flex-end;
+        background-color: #b0c4de
+    }
+
+    .product_section .product {
+
+        justify-content: space-around
+    }
+
+    .product_section>h2 {
+        left: 0;
+        width: 95%;
+        padding-left: 30px;
+        position: sticky;
+        background-color: #4682b4;
+        border-radius: 10px;
+        line-height: 50px
+    }
+
+    .product {
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+        background-color: rgba(15, 67, 119, .363);
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 1px rgba(128, 128, 128, .075)
+    }
+
+    .product h3,
+    p {
+        padding-left: 10px
+    }
+
+    .product:hover {
+        background-color: #a9a9a9
+    }
+
+    .product>img {
+        width: 300px;
+        height: 200px;
+        zoom: 0%
+    }
+
+    .product button {
+        width: 100%;
+        padding: 5px;
+        background-color: rgba(201, 194, 243, .856);
+        border: solid blue 1px;
+        border-radius: 10px;
+        color: #ee5b06;
+        font-weight: 700
+    }
+
+    .product button:active {
+        background-color: #faeae6;
+        border: solid #02611f 50% 1px;
+        border-radius: 10px;
+        color: #00ff4c;
+        font-weight: 700
+    }
+}
