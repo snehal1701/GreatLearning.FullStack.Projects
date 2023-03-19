@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 32px;
+    color: white;
+    background-color: rgb(87, 82, 82);
+}
+
+.container {
+    width: 90%;
+    min-width: 300px;
+    height: 390px;
+    box-shadow: 0px 0px 15px 9px rgb(30, 27, 27);
+    border-radius: 4px;
+    overflow-y: scroll;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: 20px;
+}
+
+.container img {
+    float: right;
+    position: sticky;
+    height: 390px;
+    width: 35%;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.row {
+    display: grid;
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 5px;
+    grid-gap: 20px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+form {
+    width: 100%;
+    position: relative;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    color: black;
+    margin-top: 5px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 80%;
+    font-size: 16px;
+}
+
+.contact_detail input,
+.contact_detail label {
+    background-color: white;
+    color: black;
+    width: 90%;
+    height: 20px;
+    font-size: 14px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1.2px solid grey;
+}
+
+.address label {
+    border: none;
+    padding-left: 10px;
+}
+
+.address select {
+    font-size: 14px;
+    width: 25%;
+    border-radius: 4px;
+    padding-left: 10px;
+    justify-items: center;
+    height: 30px;
+    padding: 0;
+}
+
+.contact_detail select option {
+    font-size: 12px;
+}
+
+input:focus {
+    border-color: white;
+}
+
+.contact_detail {
+    width: 50%;
+    padding-top: 10px;
+}
+
+.container p {
+    width: 45%;
+    font-size: larger;
+    font-weight: bold;
+}
+
+h5 {
+    width: 45%;
+}
+
+button {
+    font-size: large;
+    color: white;
+    background-color: blueviolet;
+    position: fixed;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 95px;
+    border: none;
+    border-radius: 5px;
+    bottom: 0;
+}
+
+#reset {
+    margin-left: 30%;
+    cursor: pointer;
+}
+
+#submit {
+    margin-left: 55%;
+    cursor: pointer;
+}
+
+.Lab_test {
+    margin: 10px 0px 0px 10px;
+    width: 50%
+}
+
+.Lab_test input {
+    background-color: white;
+    color: black;
+    width: 15px;
+    height: 20px;
+    border: none;
+    border-radius: 4px;
+    padding-left: 20px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.Lab_test label {
+    vertical-align: top;
+    word-wrap: break-word;
+    text-align: left;
+    line-height: 30px;
+    font-size: 19px;
+}
+
+@media only screen and (min-width:500px) {
+    input {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .contact_detail input,
+    .contact_detail label {
+        height: 30px;
+        font-size: 16px;
+    }
+
+    h5 {
+        width: 60%;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    input {
+        width: 100%;
+    }
+
+    h1 {
+        padding: 18px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .contact_details select {
+        font-size: 16px;
+    }
+
+    #reset {
+        margin-left: 40%;
+    }
+
+    #submit {
+        margin-left: 55%;
+    }
+}

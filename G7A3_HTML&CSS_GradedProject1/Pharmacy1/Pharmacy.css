@@ -194,8 +194,7 @@
 
     .product:hover {
         background-color: #a9a9a9;
-        margin: 0;
-        zoom: 102%;
+        scale: 102%;
     }
 
     .product>img {

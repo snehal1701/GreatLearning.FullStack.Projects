@@ -1,0 +1,96 @@
+#ads {
+    overflow: hidden;
+    height: 200px;
+    border: 2px solid steelblue;
+    margin: 5px;
+    z-index: -1;
+    width: 385;
+    top: 155px;
+}
+
+#ads figure {
+    left: 0;
+    width: 600%;
+    animation: 30s slideshow infinite;
+    position: relative;
+    z-index: -1;
+}
+
+#ads figure img {
+    float: left;
+    width: 16.6666%;
+    height: 200px;
+    z-index: -1;
+}
+
+@keyframes slideshow {
+    0% {
+        left: 0;
+    }
+
+    15% {
+        left: 0;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    35% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    55% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    95% {
+        left: -400%;
+    }
+
+    100% {
+        left: -500%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #ads {
+        height: 250px;
+    }
+
+    #ads figure img {
+        float: left;
+        width: 16.6666%;
+        height: 250px;
+        z-index: -1;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    #ads {
+        height: 300px;
+    }
+
+    #ads figure img {
+        float: left;
+        width: 16.6666%;
+        height: 300px;
+        z-index: -1;
+    }
+}
